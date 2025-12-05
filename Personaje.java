@@ -1,15 +1,27 @@
-public class Personaje { 
-private String nom; 
-private int dinero; 
-public Personaje(String nom, int dinero) { 
-this.nom = nom; 
-this.dinero = dinero; 
-} 
-public void mostrarInfo() { 
-System.out.println(nom + " tiene " + dinero + "$."); 
-} 
-public static void main(String[] args) { 
-Personaje jugador = new Personaje("Trevor", 500); 
-jugador.mostrarInfo(); 
-} 
+public class Personaje 
+{ 
+    private String nom; 
+    private int dinero; 
+
+    public Personaje(String nom, int dinero) 
+    { 
+        this.nom = nom; 
+        this.dinero = dinero; 
+    }
+
+    public static void gastarDinero(int gasto)
+    {
+        System.out.println("Trevor gasta "+ gasto + "$ en ropa nueva.");
+    } 
+
+    public void mostrarInfo()
+    { 
+        System.out.println(nom + " tiene " + dinero + "$."); 
+    } 
+    public static void main(String[] args)
+    { 
+        Personaje jugador = new Personaje("Trevor", 500); 
+        jugador.mostrarInfo();
+        gastarDinero(100);
+    } 
 }
